@@ -5,14 +5,39 @@ import { useEffect } from "react"
 export default function DemoPage() {
   useEffect(() => {
     // Load the Typeform embed script
-    const script = document.createElement("script")
-    script.src = "//embed.typeform.com/next/embed.js"
-    script.async = true
-    document.body.appendChild(script)
+    const typeformScript = document.createElement("script")
+    typeformScript.src = "//embed.typeform.com/next/embed.js"
+    typeformScript.async = true
+    document.body.appendChild(typeformScript)
+
+    // Load Facebook Meta Pixel
+    const fbScript = document.createElement("script")
+    fbScript.innerHTML = `
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1353521165724090');
+      fbq('track', 'PageView');
+    `
+    document.head.appendChild(fbScript)
+
+    // NoScript fallback (optional for React)
+    const noscript = document.createElement("noscript")
+    noscript.innerHTML = `
+      <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1353521165724090&ev=PageView&noscript=1"/>
+    `
+    document.body.appendChild(noscript)
 
     return () => {
-      // Cleanup script when component unmounts
-      document.body.removeChild(script)
+      document.body.removeChild(typeformScript)
+      document.head.removeChild(fbScript)
+      document.body.removeChild(noscript)
     }
   }, [])
 
