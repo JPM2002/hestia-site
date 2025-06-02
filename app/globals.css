@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --hestia-red-dark: #6b0f1a;
+  --hestia-red: #a31621;
+  --hestia-coffee-dark: #5e503f;
+  --hestia-coffee: #7e6651;
+  --hestia-gold: #d4af37;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-gray-900;
+  }
+}
