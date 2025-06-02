@@ -2,40 +2,42 @@ import { Target, Award, MapPin } from "lucide-react"
 
 const team = [
   {
-    name: "Diego Martínez",
-    role: "CEO & Fundador",
-    bio: "Ex-ingeniero de sistemas con 10 años en automatización hotelera.",
-    image: "/placeholder.svg?height=300&width=300",
+    name: "Sebastián Fruns Paz",
+    role: "Co-Fundador",
+    bio: "Administrador de empresas con enfoque en innovación y liderazgo estratégico.",
+    image: "/Founders/Sebastian.jpeg",
   },
   {
-    name: "Carmen Silva",
+    name: "Andrés Ortiz Osadey",
+    role: "Co-Fundador",
+    bio: "Administrador de empresas apasionado por el desarrollo organizacional y la eficiencia operativa.",
+    image: "/Founders/Andres.jpeg",
+  },
+  {
+    name: "Pedro Pablo Arriagada",
+    role: "Co-Fundador",
+    bio: "Administrador de empresas con experiencia en gestión de proyectos y emprendimiento.",
+    image: "/Founders/Pedro.jpeg",
+  },
+  {
+    name: "Javier Pozo Miranda",
     role: "CTO",
-    bio: "Especialista en IA y machine learning aplicado a la industria de servicios.",
-    image: "/placeholder.svg?height=300&width=300",
+    bio: "Ingeniero en Ciencias de la Computación con especialización en inteligencia artificial y automatización aplicada.",
+    image: "/Founders/Profile.jpg",
   },
-  {
-    name: "Roberto Vega",
-    role: "Director de Producto",
-    bio: "Experto en UX/UI con experiencia en plataformas empresariales.",
-    image: "/placeholder.svg?height=300&width=300",
-  },
-]
+];
+
 
 const milestones = [
   {
-    year: "2022",
+    year: "2025",
     title: "Fundación de Hestia",
-    description: "Inicio del desarrollo de la plataforma con enfoque en automatización hotelera.",
+    description: "Nace Hestia con la misión de transformar la comunicación hotel-huésped mediante inteligencia artificial.",
   },
   {
-    year: "2023",
-    title: "Primer Cliente",
-    description: "Implementación exitosa en Hotel Boutique Santiago con 80% de reducción en tiempo de respuesta.",
-  },
-  {
-    year: "2024",
-    title: "Expansión Regional",
-    description: "Más de 50 hoteles en Latinoamérica utilizando nuestra plataforma.",
+    year: "2025",
+    title: "Desarrollo del MVP",
+    description: "Diseño e implementación de la primera versión funcional de nuestra plataforma enfocada en automatización hotelera.",
   },
 ]
 
@@ -129,7 +131,7 @@ export default function AboutPage() {
             <p className="text-xl text-gray-600">Expertos en tecnología y hospitalidad trabajando juntos.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {team.map((member, index) => (
               <div key={index} className="text-center">
                 <div className="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden bg-gray-200">
