@@ -1,6 +1,8 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
+import { Analytics } from "@vercel/analytics/next"
+import { Suspense } from "react"
 import "./globals.css"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
@@ -23,9 +25,12 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className={inter.className}>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <Suspense fallback={<div>Loading...</div>}>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+          <Analytics />
+        </Suspense>
       </body>
     </html>
   )

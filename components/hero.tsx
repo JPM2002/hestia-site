@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowRight, Play } from "lucide-react"
+import { ArrowRight, MessageSquare } from "lucide-react"
 
 export default function Hero() {
   return (
@@ -23,11 +23,11 @@ export default function Hero() {
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <Link
-                href="/technology"
+                href="/demo"
                 className="border-2 border-white text-white hover:bg-white hover:text-[#a31621] font-semibold px-6 py-3 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2"
               >
-                <Play className="w-5 h-5" />
-                <span>Ver Tecnología</span>
+                <MessageSquare className="w-5 h-5" />
+                <span>Más Información</span>
               </Link>
             </div>
           </div>
