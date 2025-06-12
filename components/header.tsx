@@ -34,7 +34,7 @@ export default function Header() {
               Contacto
             </Link>
             <Link
-              href="/consultation"
+              href="/demo"
               className="bg-[#d4af37] hover:bg-[#b8941f] text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200"
             >
               Agendar Demo
